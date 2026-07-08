@@ -44,7 +44,7 @@ author:
   pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=azar+kazemi"
   researchgate     : # URL
   scopus           : # URL
-  zotero           : # URL
+  zotero           : https://www.zotero.org/azarkazemi/library
 
 
   # Repositories and software development

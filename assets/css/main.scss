@@ -58,6 +58,13 @@
 #body {
 #    background-color: #0f172a;
 #}
-.initial-content {
-    background-color: #0f172a;
+#.initial-content {
+ #   background-color: #0f172a;
+#}
+#main {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2em 1em;
+  box-sizing: border-box;
+  background-color: #0f172a;
 }

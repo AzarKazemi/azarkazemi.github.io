@@ -1,13 +1,12 @@
 ---
-title: "Paper Title Number 5, with math $$E=mc^2$$"
+title: "From pixels to pathology: Restoration diffusion for diagnostic-consistent virtual IHC"
 collection: publications
 category: conferences
-permalink: /publication/2024-02-17-paper-title-number-4
-excerpt: 'This paper is about a famous math equation, $$E=mc^2$$'
-date: 2024-02-17
+#permalink: /publication/2024-02-17-paper-title-number-4
+#excerpt: 'This paper is about a famous math equation, $$E=mc^2$$'
+date: 2025-11-1
 venue: 'GitHub Journal of Bugs'
-paperurl: 'https://academicpages.github.io/files/paper3.pdf'
-citation: 'Your Name, You. (2024). &quot;Paper Title Number 3.&quot; <i>GitHub Journal of Bugs</i>. 1(3).'
+paperurl: 'https://www.sciencedirect.com/science/article/pii/S001048252501618X'
+citation: 'Liu J, Deng X, Li H, Kazemi A, Grashei C, Wilkens G, You X, Groll T, Navab N, Mogler C, Schüffler PJ. From pixels to pathology: Restoration diffusion for diagnostic-consistent virtual IHC. Computers in Biology and Medicine. 2025 Nov 1;198:111264.'
 ---
-
-Using [MathJax](https://www.mathjax.org/) in the description is supported - $$E=mc^2$$ - however, the use must be mindful that the default delimiters are `$$...$$` and `\\[...\\]` which differs from the `$...$` that is typically expected.
+Hematoxylin and eosin (H&E) staining is the clinical standard for assessing tissue morphology, but it lacks molecular-level diagnostic information. In contrast, immunohistochemistry (IHC) provides crucial insights into biomarker expression, such as HER2 status for breast cancer grading, but remains costly and time-consuming, limiting its use in time-sensitive clinical workflows. To address this gap, virtual staining from H&E to IHC has emerged as a promising alternative, yet faces two core challenges: (1) Lack of fair evaluation of synthetic images against misaligned IHC ground truths, and (2) preserving structural integrity and biological variability during translation. To this end, we present an end-to-end framework encompassing both generation and evaluation in this work. We introduce Star-Diff, a structure-aware staining restoration diffusion model that reformulates virtual staining as an image restoration task. By combining residual and noise-based generation pathways, Star-Diff maintains tissue structure while modeling realistic biomarker variability. To evaluate the diagnostic consistency of the generated IHC patches, we propose the Semantic Fidelity Score (SFS), a clinical-grading-task-driven metric that quantifies class-wise semantic degradation based on biomarker classification accuracy. Unlike pixel-level metrics such as SSIM and PSNR, SFS remains robust under spatial misalignment and classifier uncertainty. Experiments on the BCI dataset demonstrate that Star-Diff achieves state-of-the-art (SOTA) performance in both visual fidelity and diagnostic relevance. With rapid inference and strong clinical alignment, it presents a practical solution for applications such as intraoperative virtual IHC synthesis.

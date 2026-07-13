@@ -3,7 +3,7 @@ title: "Paired Uterine Whole-Slide Images and Pathology Reports for Multimodal C
 collection: publications
 category: manuscripts
 permalink: https://arxiv.org/abs/2607.04020
-excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
+#excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
 date: 2026
 venue: 'arxiv'
 #slidesurl: 'https://academicpages.github.io/files/slides1.pdf'

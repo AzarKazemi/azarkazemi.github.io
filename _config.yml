@@ -9,7 +9,7 @@
 # Basic Site Settings
 locale: "en-US"
 site_theme: "default"
-title: "Azar's Page"
+title: "About Azar"
 title_separator: "-"
 name: &name "Azar Kazemi"
 description: &description "Azar Kazemi's academic portfolio"

@@ -4,11 +4,9 @@ collection: publications
 category: manuscript
 #permalink: /publication/2024-02-17-paper-title-number-4
 #excerpt: 'This paper is about fixing template issue #693.'
-date: 2025-10-01
+date: 2025-10-1
 venue: 'Computers in Biology and Medicine'
 paperurl: 'https://www.sciencedirect.com/science/article/pii/S001048252501340X'
 citation: 'Saueressig C, Delbridge C, Scholz D, Kazemi A, Khan MZ, Metz M, Meyer B, Mitsdoerffer M, Schüffler PJ, Wiestler B. From histology to diagnosis: Leveraging pathology foundation models for glioma classification. Computers in Biology and Medicine. 2025 Oct 1;197:110988.'
 ---
-The fifth edition of the WHO classification of brain tumors increasingly emphasizes the role of extensive genetic testing in the diagnosis of gliomas. In this context, computational pathology foundation models (FMs) present a promising approach for inferring molecular entities directly from conventional, H&E-stained histological images, potentially reducing the need for genetic analysis. We conducted a robust investigation into the ability of five established FMs to generate effective embeddings for downstream glioma classification using three datasets (TCGA, n=839 samples; EBRAINS, n=786 samples; TUM, n=250 samples) and state-of-the-art augmentation techniques. Our results demonstrate that FM embeddings enable competitive glioma classification performance, even with limited training data, achieving one-vs-rest AUC
->
-0.93 on all three datasets. However, we observed substantial differences between FMs in their downstream performance, susceptibility to perturbations, and consistency across multiple datasets. ...
+The fifth edition of the WHO classification of brain tumors increasingly emphasizes the role of extensive genetic testing in the diagnosis of gliomas. ...

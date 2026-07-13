@@ -5,7 +5,7 @@ category: conferences
 #permalink: /publication/2024-02-17-paper-title-number-4
 #excerpt: 'This paper is about a famous math equation, $$E=mc^2$$'
 date: 2025-11-1
-venue: 'GitHub Journal of Bugs'
+venue: 'Computers in Biology and Medicine'
 paperurl: 'https://www.sciencedirect.com/science/article/pii/S001048252501618X'
 citation: 'Liu J, Deng X, Li H, Kazemi A, Grashei C, Wilkens G, You X, Groll T, Navab N, Mogler C, Schüffler PJ. From pixels to pathology: Restoration diffusion for diagnostic-consistent virtual IHC. Computers in Biology and Medicine. 2025 Nov 1;198:111264.'
 ---

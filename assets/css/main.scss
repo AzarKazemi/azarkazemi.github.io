@@ -37,6 +37,13 @@
     "layout/sidebar",
     "layout/json_cv"
 ;
+.page-banner-wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
 .page-banner {
   width: 100%;
   overflow: hidden;

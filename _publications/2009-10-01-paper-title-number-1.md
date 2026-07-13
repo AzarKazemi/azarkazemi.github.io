@@ -6,7 +6,7 @@ permalink: https://arxiv.org/abs/2607.04020
 excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
 date: 2026
 venue: 'arxiv'
-slidesurl: 'https://academicpages.github.io/files/slides1.pdf'
+#slidesurl: 'https://academicpages.github.io/files/slides1.pdf'
 paperurl: 'https://arxiv.org/abs/2607.04020'
 #bibtexurl: 'https://academicpages.github.io/files/bibtex1.bib'
 citation: 'Li H, Liu J, Ura A, Hou J, Xu Z, Kazemi A, Thaeter O, Grashei C, Gülhan F, Nasirigerdeh R, Ma X. Paired Uterine Whole-Slide Images and Pathology Reports for Multimodal Computational Pathology. arXiv preprint arXiv:2607.04020. 2026 Jul 4.'

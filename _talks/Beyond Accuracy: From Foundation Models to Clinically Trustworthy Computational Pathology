@@ -1,1 +1,13 @@
+---
+title: "Beyond Accuracy: From Foundation Models to Clinically Trustworthy Computational Pathology"
+collection: talks
+type: "Summit"
+permalink: /talks/2026-10-28-talk-1
+venue: Online"
+date: 2026-10-28
+location: "MedAI Summit"
+---
+
+
+In this talk, I share insights regarding foundation models and their applicability in diagnostic tasks and also question whether they can provide trustworthiness in clinical settings.
 

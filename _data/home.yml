@@ -61,3 +61,8 @@ news:
     title: "Beyond Accuracy: From Foundation Models to Clinically Trustworthy Computational Pathology"
     url: "/talks/2026-10-28-talk-1"
     image: "/images/talks/medai-summit-2026.png"
+  - date: 2026-10-04
+    place: "MICCAI 2026 · Abu Dhabi"
+    title: "Contributing to the REG² 2026 challenge on reasoning-guided pathology report generation"
+    url: "https://reg2026.grand-challenge.org/"
+    image: "/images/talks/reg2026-miccai.jpg"

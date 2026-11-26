@@ -4,7 +4,7 @@ collection: publications
 category: manuscripts
 #permalink: /publication/2024-02-17-paper-title-number-4
 #excerpt: 'This paper is about fixing template issue #693.'
-date: 2025-10-1
+date: 2025-09-05
 venue: 'Computers in Biology and Medicine'
 paperurl: 'https://www.sciencedirect.com/science/article/pii/S001048252501340X'
 citation: 'Saueressig C, Delbridge C, Scholz D, Kazemi A, Khan MZ, Metz M, Meyer B, Mitsdoerffer M, Schüffler PJ, Wiestler B. From histology to diagnosis: Leveraging pathology foundation models for glioma classification. Computers in Biology and Medicine. 2025 Oct 1;197:110988.'

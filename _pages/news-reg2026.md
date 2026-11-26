@@ -21,7 +21,7 @@ My work in the challenge focuses on:
 
 - pathology **data collection and curation**;
 - **quality control** of slides and reports;
-- **report generation with large language models (LLMs)**;
+- contributing to **prompt engineering** for report generation with large language models (LLMs);
 - **reasoning-based evaluation** of the generated reports;
 - **reviewing papers** submitted by participating teams.
 

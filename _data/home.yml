@@ -64,5 +64,5 @@ news:
   - date: 2026-10-04
     place: "MICCAI 2026 · Abu Dhabi"
     title: "Contributing to the REG² 2026 challenge on reasoning-guided pathology report generation"
-    url: "https://reg2026.grand-challenge.org/"
+    url: "/news/reg2026-miccai/"
     image: "/images/talks/reg2026-miccai.jpg"

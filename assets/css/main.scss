@@ -1,10 +1,11 @@
-
 ---
 ---
 
 /*
  * Main stylesheet for Academic Pages
- * The first two lines are required by Jekyll.
+ * The two "---" lines above are required by Jekyll and MUST be the very
+ * first lines of this file (no blank line before them), otherwise Jekyll
+ * does not compile it and the site loads with no styles at all.
  */
 
 @import
@@ -31,51 +32,150 @@
     "layout/json_cv"
 ;
 
-/* White website background */
-html,
-body,
-.initial-content {
-  background-color: #ffffff;
-}
+/* ==========================================================================
+   SITE LAYOUT
+   Full-width header bar and banner; all page content sits in one centred
+   column with side margins. Change the values below to adjust every page.
+   ========================================================================== */
 
-/* Main content */
-#main {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2em 20px;
+$site-max-width:     1140px;  // width of the centred content column
+$site-gutter:        32px;    // side margin on tablets/desktops
+$site-gutter-mobile: 16px;    // side margin on phones
+$sidebar-col:        230px;   // width of the profile column on wide screens
+$column-gap:         56px;    // space between profile column and text
+
+/* Header bar: spans the full window; its contents line up with the column */
+.masthead__inner-wrap {
+  max-width: $site-max-width;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $site-gutter-mobile;
+  padding-right: $site-gutter-mobile;
   box-sizing: border-box;
-  background-color: #ffffff;
+
+  @include breakpoint($medium) {
+    padding-left: $site-gutter;
+    padding-right: $site-gutter;
+  }
+
+  @include breakpoint($x-large) {
+    max-width: $site-max-width;
+  }
 }
 
-/* Banner container */
-.page-banner-wrapper {
-  width: 100%;
-  max-width: 1200px;
-  margin: 20px auto 30px;
-  padding: 0 20px;
-  box-sizing: border-box;
-}
-
-/* Banner shape */
-.page-banner {
+/* Banner: full-width strip, image cropped (not stretched) to fit any width */
+.site-banner {
   width: 100%;
   overflow: hidden;
-  border-radius: 12px;
+  border-bottom: 1px solid var(--global-border-color);
+
+  img {
+    display: block;
+    width: 100%;
+    height: clamp(110px, 18vw, 280px);
+    object-fit: cover;
+    object-position: center 55%;
+    border-radius: 0;
+    margin: 0;
+  }
 }
 
-/* Banner image */
-.page-banner img {
+/* Centred content column */
+#main {
   width: 100%;
-  height: 240px;
-  object-fit: cover;
-  object-position: center;
-  display: block;
+  max-width: $site-max-width;
+  margin: 2.5em auto 0;
+  padding-left: $site-gutter-mobile;
+  padding-right: $site-gutter-mobile;
+  box-sizing: border-box;
+
+  @include breakpoint($medium) {
+    padding-left: $site-gutter;
+    padding-right: $site-gutter;
+  }
+
+  @include breakpoint($x-large) {
+    max-width: $site-max-width;
+  }
 }
 
-/* Smaller banner on mobile */
-@media (max-width: 768px) {
-  .page-banner img {
-    height: 140px;
+/* Long words/URLs and wide media never push the page wider than the screen */
+.page__content,
+.archive {
+  overflow-wrap: anywhere;
+
+  img,
+  video,
+  iframe {
+    max-width: 100%;
+    height: auto;
+  }
+
+  table {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+  }
+}
+
+/* Wide screens: profile column on the left, text on the right */
+@include breakpoint($large) {
+  #main:has(> .sidebar) {
+    display: grid;
+    grid-template-columns: $sidebar-col minmax(0, 1fr);
+    column-gap: $column-gap;
+    align-items: start;
+
+    /* clearfix pseudo-elements would otherwise become grid cells */
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+
+  /* Sidebar scrolls with the page and stays inside the column
+     (the theme made it position: fixed against the window edge) */
+  #main > .sidebar {
+    position: sticky;
+    top: calc(#{$masthead-height} + 1.5em);
+    float: none;
+    width: auto;
+    max-width: none;
+    height: auto;
+    max-height: calc(100vh - #{$masthead-height} - 3em);
+    overflow-y: auto;
+    margin: 0;
+    padding-top: 0 !important;  // the nav script sets an inline padding-top
+  }
+
+  #main > .page,
+  #main > .archive {
+    float: none;
+    width: auto;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/* Footer: full width, normal flow (it was fixed to the bottom of the window
+   and covered content on short screens); text lines up with the column */
+.page__footer {
+  position: static;
+  float: none;
+
+  footer {
+    max-width: $site-max-width;
+    padding-left: $site-gutter-mobile;
+    padding-right: $site-gutter-mobile;
+    box-sizing: border-box;
+
+    @include breakpoint($medium) {
+      padding-left: $site-gutter;
+      padding-right: $site-gutter;
+    }
+
+    @include breakpoint($x-large) {
+      max-width: $site-max-width;
+    }
   }
 }

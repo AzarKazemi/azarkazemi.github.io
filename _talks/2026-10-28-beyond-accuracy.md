@@ -10,4 +10,3 @@ location: "Online"
 
 
 In this talk, I share insights regarding foundation models and their applicability in diagnostic tasks and also question whether they can provide trustworthiness in clinical settings.
-

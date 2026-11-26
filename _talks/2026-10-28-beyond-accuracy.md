@@ -7,6 +7,8 @@ permalink: /talks/2026-10-28-talk-1
 venue: "2nd MedAI Summit 2026"
 date: 2026-10-28
 location: "Online"
+image: "/images/talks/medai-summit-2026.png"
+image_alt: "2nd MedAI Summit 2026 logo"
 link: "https://medaisummit.org/en/speakers/dr-azar-kazemi"
 excerpt: "Key speaker on Day 1 of the 2nd MedAI Summit: why high accuracy is a starting point, not the endpoint, and what evidence pathology foundation models need to earn clinical trust."
 ---

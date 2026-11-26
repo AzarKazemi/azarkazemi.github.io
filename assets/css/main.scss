@@ -592,28 +592,6 @@ html[data-theme="dark"] {
   }
 }
 
-/* A single news card (e.g. one talk) is shown wide: image left, text right */
-.news-grid:has(> .news-card:only-child) {
-  grid-template-columns: minmax(0, 1fr);
-}
-
-.news-card:only-child {
-  @include breakpoint($small) {
-    display: grid;
-    grid-template-columns: 260px minmax(0, 1fr);
-    grid-template-rows: auto 1fr;
-
-    .news-card__img {
-      grid-row: 1 / span 2;
-      aspect-ratio: auto;
-      min-height: 140px;
-    }
-
-    .news-card__meta { padding: 16px 20px 4px; align-self: end; }
-    .news-card__title { padding: 0 20px 16px; font-size: 0.95em; }
-  }
-}
-
 .news-card--pub .news-card__img {
   background: #fff;
 

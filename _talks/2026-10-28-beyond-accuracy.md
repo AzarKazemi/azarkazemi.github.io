@@ -13,6 +13,8 @@ link: "https://medaisummit.org/en/speakers/dr-azar-kazemi"
 excerpt: "Key speaker on Day 1 of the 2nd MedAI Summit: why high accuracy is a starting point, not the endpoint, and what evidence pathology foundation models need to earn clinical trust."
 ---
 
+![2nd MedAI Summit 2026 logo](/images/talks/medai-summit-2026.png){: style="max-width: 420px; border: 1px solid var(--pub-card-border); border-radius: 10px;"}
+
 I was invited as a **key speaker** on Day 1 of the [2nd MedAI Summit](https://medaisummit.org/en/speakers/dr-azar-kazemi), the international summit on artificial intelligence in healthcare.
 
 **Session:** October 28, 2026, 10:30–11:10 (GMT) · Online

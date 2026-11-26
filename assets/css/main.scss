@@ -348,6 +348,21 @@ html[data-theme="dark"] {
   &:hover img { transform: scale(1.03); }
 }
 
+/* Teaching cards: icon tile in place of a figure */
+.pub-card__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 260px;
+  height: 110px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+  color: var(--pub-accent);
+  font-size: 2.6em;
+}
+
 /* ==========================================================================
    HOME PAGE (_includes/home/*.html, content in _data/home.yml)
    ========================================================================== */

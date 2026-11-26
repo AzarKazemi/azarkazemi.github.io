@@ -1,0 +1,46 @@
+{% comment %}
+  Teaching experience shown as a card, same style as publication cards.
+  Front matter used: title, type, semester, venue, school, department, program,
+  course_code, credits, hours, location, icon, excerpt. Body = description.
+{% endcomment %}
+<article class="pub-card" itemscope itemtype="http://schema.org/Course">
+  <div class="pub-card__body">
+    <p class="pub-card__tag">
+      <span class="pub-card__tag-label">{{ post.type | default: "Course" }}</span>
+      <span>{{ post.semester }}</span>
+    </p>
+
+    <h3 class="pub-card__title" itemprop="name">{{ post.title }}</h3>
+
+    {% if post.excerpt %}
+      <p class="pub-card__excerpt">{{ post.excerpt | strip_html | strip }}</p>
+    {% endif %}
+
+    <details class="pub-card__more">
+      <summary>
+        <span class="pub-card__more-open">More</span><span class="pub-card__more-close">Less</span>
+        <span aria-hidden="true">&rarr;</span>
+      </summary>
+
+      <dl class="pub-card__details">
+        {% if post.course_code %}<dt>Course code</dt><dd itemprop="courseCode">{{ post.course_code }}</dd>{% endif %}
+        {% if post.credits %}<dt>Credits</dt><dd>{{ post.credits }}</dd>{% endif %}
+        {% if post.hours %}<dt>Hours</dt><dd>{{ post.hours }}</dd>{% endif %}
+        {% if post.semester %}<dt>Semester</dt><dd>{{ post.semester }}</dd>{% endif %}
+        {% if post.program %}<dt>Program</dt><dd>{{ post.program }}</dd>{% endif %}
+        {% if post.school %}<dt>School</dt><dd>{{ post.school }}{% if post.department %}, {{ post.department }}{% endif %}</dd>{% endif %}
+        {% if post.venue %}<dt>University</dt><dd itemprop="provider">{{ post.venue }}{% if post.location %}, {{ post.location }}{% endif %}</dd>{% endif %}
+      </dl>
+    </details>
+  </div>
+
+  <div class="pub-card__aside">
+    {% if post.venue %}
+      <p class="pub-card__tag">
+        <span class="pub-card__tag-label">University</span>
+        <span>{{ post.venue }}</span>
+      </p>
+    {% endif %}
+    <div class="pub-card__icon" aria-hidden="true"><i class="{{ post.icon | default: 'fas fa-chalkboard-teacher' }}"></i></div>
+  </div>
+</article>

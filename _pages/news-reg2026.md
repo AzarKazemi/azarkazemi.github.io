@@ -7,7 +7,7 @@ excerpt: "Contributing to the REG² 2026 challenge at MICCAI 2026: generating pa
 
 ![REG² 2026 challenge and MICCAI 2026 logos](/images/talks/reg2026-miccai.jpg){: style="max-width: 420px; border: 1px solid var(--pub-card-border); border-radius: 10px;"}
 
-**MICCAI 2026 · Abu Dhabi · October 4–8, 2026**
+**MICCAI 2026 · Strasbourg, France · September 27 – October 1, 2026**
 
 I contribute to the **Pathologist REasoning-Guided REport Generation Challenge (REG² 2026)**, an international challenge organized within the MICCAI 2026 framework, with the Schüffler Lab at the Institute of Pathology, Technical University of Munich (TUM), contributing to its organization and scientific development.
 

@@ -1,0 +1,25 @@
+{% comment %} Full-width home hero. Content: _data/home.yml (hero, stats). {% endcomment %}
+{% assign hero = site.data.home.hero %}
+{% assign stats = site.data.home.stats %}
+<section class="home-hero" aria-label="Introduction">
+  <div class="home-hero__bg" style="background-image: url('{{ '/images/banner.jpg' | relative_url }}')"></div>
+  <div class="home-hero__inner">
+    <p class="home-hero__eyebrow">{{ hero.eyebrow }}</p>
+    <h2 class="home-hero__headline">{{ hero.headline }}<br><span>{{ hero.headline_accent }}</span></h2>
+    <p class="home-hero__intro">{{ hero.intro }}</p>
+
+    <div class="home-hero__buttons">
+      {% for b in hero.buttons %}
+        <a class="home-hero__btn home-hero__btn--{{ b.style | default: 'primary' }}" href="{{ b.url | relative_url }}">{{ b.label }}{% if b.style == 'secondary' %} <span aria-hidden="true">&rarr;</span>{% endif %}</a>
+      {% endfor %}
+    </div>
+
+    <dl class="home-hero__stats">
+      <div><dt>Publications</dt><dd>{{ site.publications.size }}</dd></div>
+      {% if stats.citations %}<div><dt>Citations</dt><dd>{{ stats.citations }}</dd></div>{% endif %}
+      {% if stats.h_index %}<div><dt>h-index</dt><dd>{{ stats.h_index }}</dd></div>{% endif %}
+      <div><dt>Talks</dt><dd>{{ site.talks.size }}</dd></div>
+    </dl>
+    {% if stats.source %}<p class="home-hero__source">Citation metrics: {{ stats.source }}</p>{% endif %}
+  </div>
+</section>

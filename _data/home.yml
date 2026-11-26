@@ -1,0 +1,71 @@
+# Content for the home page (_pages/about.html). Edit freely; no code changes needed.
+
+hero:
+  eyebrow: "Azar Kazemi, PhD · Medical Informatics"
+  headline: "Trustworthy AI for"
+  headline_accent: "Computational Pathology"
+  intro: >-
+    I build and evaluate machine-learning methods that turn whole-slide images and
+    biomedical data into reliable clinical evidence, from pathology foundation
+    models to reproducible data workflows in clinical routine.
+  buttons:
+    - label: "Publications"
+      url: "/publications/"
+      style: primary
+    - label: "CV"
+      url: "/cv/"
+      style: secondary
+
+# Citation numbers are not computed automatically. Source: OpenAlex, 2026-11-26.
+# Replace with your Google Scholar numbers whenever you like.
+stats:
+  citations: 453
+  h_index: 9
+  source: "OpenAlex"
+
+# Each theme counts the publications whose front matter lists its id under `themes:`.
+themes:
+  - id: computational-pathology
+    title: "Computational Pathology & Foundation Models"
+    icon: "fas fa-microscope"
+    color: "#4b3fb5"
+    text: >-
+      Benchmarking and ensembling pathology foundation models for subtyping, cancer
+      detection, tumor classification and virtual staining on real-world cohorts.
+  - id: digital-pathology
+    title: "Digital Pathology in Clinical Routine"
+    icon: "fas fa-hospital"
+    color: "#1f8a8a"
+    text: >-
+      Bringing digital pathology into everyday diagnostics: workflow validation,
+      inter-observer agreement and reproducible, high-quality datasets.
+  - id: clinical-ml
+    title: "Machine Learning for Clinical Prediction"
+    icon: "fas fa-chart-line"
+    color: "#2f6fd0"
+    text: >-
+      Interpretable prediction models for patient outcomes, from transplantation
+      and burn survival to critical-care triage.
+
+# News & talks cards (newest first). image: path under /images, or leave empty.
+news:
+  - date: 2026-10-28
+    place: "MedAI Summit 2026 · Online"
+    title: "Talk: Beyond Accuracy: From Foundation Models to Clinically Trustworthy Computational Pathology"
+    url: "/talks/2026-10-28-talk-1"
+    image: "/images/banner.jpg"
+  - date: 2026-10-21
+    place: "npj Digital Medicine"
+    title: "Published: ensembling foundation models for Barrett's esophagus subtyping and cancer detection"
+    url: "https://doi.org/10.1038/s41746-026-03329-3"
+    image: "/images/publications/clinical-benchmark-barrett.jpg"
+  - date: 2026-07-04
+    place: "arXiv"
+    title: "New dataset: TUM-Uteria, paired uterine whole-slide images and pathology reports"
+    url: "https://arxiv.org/abs/2607.04020"
+    image: "/images/publications/uterine-wsi-reports.jpg"
+  - date: 2025-11-01
+    place: "Computers in Biology and Medicine"
+    title: "Published: restoration diffusion for diagnostic-consistent virtual IHC"
+    url: "https://doi.org/10.1016/j.compbiomed.2025.111264"
+    image: "/images/publications/virtual-ihc-diffusion.jpg"

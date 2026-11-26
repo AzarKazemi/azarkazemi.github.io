@@ -15,10 +15,14 @@ layout: compress
     {% include browser-upgrade.html %}
     {% include masthead.html %}
 
-    <!-- Full-width banner strip; the image is cropped to fit by CSS (object-fit: cover) -->
-    <div class="site-banner">
-      <img src="{{ '/images/banner.jpg' | relative_url }}" alt="" width="1920" height="768" fetchpriority="high">
-    </div>
+    {% if page.home_hero %}
+      {% include home/hero.html %}
+    {% else %}
+      <!-- Full-width banner strip; the image is cropped to fit by CSS (object-fit: cover) -->
+      <div class="site-banner">
+        <img src="{{ '/images/banner.jpg' | relative_url }}" alt="" width="1920" height="768" fetchpriority="high">
+      </div>
+    {% endif %}
 
     {{ content }}
 

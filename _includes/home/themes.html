@@ -1,0 +1,19 @@
+{% comment %} Research theme cards. Content: _data/home.yml (themes); counts come from publications' `themes:`. {% endcomment %}
+<section class="home-section" aria-labelledby="home-themes">
+  <div class="home-section__head">
+    <h2 id="home-themes">Research themes</h2>
+    <a href="{{ '/publications/' | relative_url }}">All publications <span aria-hidden="true">&rarr;</span></a>
+  </div>
+  <div class="theme-grid">
+    {% for t in site.data.home.themes %}
+      {% assign n = 0 %}
+      {% for p in site.publications %}{% if p.themes contains t.id %}{% assign n = n | plus: 1 %}{% endif %}{% endfor %}
+      <article class="theme-card" style="--theme-color: {{ t.color }}">
+        <span class="theme-card__icon"><i class="{{ t.icon }}" aria-hidden="true"></i></span>
+        <h3 class="theme-card__title">{{ t.title }}</h3>
+        <p class="theme-card__text">{{ t.text }}</p>
+        <p class="theme-card__count"><strong>{{ n }}</strong> {% if n == 1 %}paper{% else %}papers{% endif %}</p>
+      </article>
+    {% endfor %}
+  </div>
+</section>

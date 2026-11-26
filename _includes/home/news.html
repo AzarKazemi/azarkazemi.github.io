@@ -1,0 +1,19 @@
+{% comment %} News & talks cards. Content: _data/home.yml (news). {% endcomment %}
+<section class="home-section" aria-labelledby="home-news">
+  <div class="home-section__head">
+    <h2 id="home-news">Latest news &amp; talks</h2>
+    <a href="{{ '/talks/' | relative_url }}">All talks <span aria-hidden="true">&rarr;</span></a>
+  </div>
+  <div class="news-grid">
+    {% for item in site.data.home.news limit: 4 %}
+      {% if item.url contains '://' %}{% assign href = item.url %}{% else %}{% assign href = item.url | relative_url %}{% endif %}
+      <a class="news-card" href="{{ href }}"{% if item.url contains '://' %} target="_blank" rel="noopener"{% endif %}>
+        <span class="news-card__img">
+          {% if item.image %}<img src="{{ item.image | relative_url }}" alt="" loading="lazy">{% endif %}
+        </span>
+        <span class="news-card__meta">{{ item.date | date: "%b %Y" | upcase }} &middot; {{ item.place }}</span>
+        <span class="news-card__title">{{ item.title }}</span>
+      </a>
+    {% endfor %}
+  </div>
+</section>

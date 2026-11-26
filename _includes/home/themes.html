@@ -1,4 +1,4 @@
-{% comment %} Research theme cards. Content: _data/home.yml (themes); counts come from publications' `themes:`. {% endcomment %}
+{% comment %} Research theme cards. Content: _data/home.yml (themes); counts come from _data/all_publications.yml. {% endcomment %}
 <section class="home-section" aria-labelledby="home-themes">
   <div class="home-section__head">
     <h2 id="home-themes">Research themes</h2>
@@ -7,7 +7,7 @@
   <div class="theme-grid">
     {% for t in site.data.home.themes %}
       {% assign n = 0 %}
-      {% for p in site.publications %}{% if p.themes contains t.id %}{% assign n = n | plus: 1 %}{% endif %}{% endfor %}
+      {% for p in site.data.all_publications %}{% if p.themes contains t.id %}{% assign n = n | plus: 1 %}{% endif %}{% endfor %}
       <article class="theme-card" style="--theme-color: {{ t.color }}">
         <span class="theme-card__icon"><i class="{{ t.icon }}" aria-hidden="true"></i></span>
         <h3 class="theme-card__title">{{ t.title }}</h3>

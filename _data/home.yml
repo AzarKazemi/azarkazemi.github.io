@@ -23,7 +23,7 @@ stats:
   h_index: 9
   source: "OpenAlex"
 
-# Each theme counts the publications whose front matter lists its id under `themes:`.
+# Each theme counts the entries in _data/all_publications.yml that list its id under `themes:`.
 themes:
   - id: computational-pathology
     title: "Computational Pathology & Foundation Models"
@@ -44,8 +44,15 @@ themes:
     icon: "fas fa-chart-line"
     color: "#2f6fd0"
     text: >-
-      Interpretable prediction models for patient outcomes, from transplantation
-      and burn survival to critical-care triage.
+      Interpretable prediction models for patient outcomes, from liver-transplant
+      and burn survival to COVID-19 intensive-care triage and diabetes risk.
+  - id: digital-health
+    title: "Digital Health & Clinical Research"
+    icon: "fas fa-mobile-alt"
+    color: "#c2410c"
+    text: >-
+      Defining digital health, horizon scanning of mHealth technologies, e-learning
+      and clinical studies on medication adherence and patient care.
 
 # News & talks cards (newest first). image: path under /images, or leave empty.
 news:

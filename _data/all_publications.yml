@@ -1,0 +1,95 @@
+# Full publication list (as on Google Scholar), used for the home-page counts:
+#   - "Publications" in the hero = number of entries below
+#   - each Research theme counts the entries that list its id under `themes`
+# Built from OpenAlex + ORCID on 2026-11-26 (Google Scholar blocks automated access).
+# Duplicates (preprint of a published paper, translated versions) are listed once.
+# Theme ids: computational-pathology, digital-pathology, clinical-ml, digital-health
+
+- year: 2026
+  title: "Towards reliable morphological subtyping and cancer detection on Barrett's esophagus pathology through ensembling foundation models"
+  venue: "npj Digital Medicine"
+  themes: [computational-pathology]
+- year: 2026
+  title: "Paired Uterine Whole-Slide Images and Pathology Reports for Multimodal Computational Pathology"
+  venue: "arXiv"
+  themes: [computational-pathology]
+- year: 2025
+  title: "From pixels to pathology: Restoration diffusion for diagnostic-consistent virtual IHC"
+  venue: "Computers in Biology and Medicine"
+  themes: [computational-pathology]
+- year: 2025
+  title: "From histology to diagnosis: Leveraging pathology foundation models for glioma classification"
+  venue: "Computers in Biology and Medicine"
+  themes: [computational-pathology]
+- year: 2025
+  title: "An equivalency and efficiency study for one year digital pathology for clinical routine diagnostics in an accredited tertiary academic center"
+  venue: "Virchows Archiv"
+  themes: [digital-pathology]
+- year: 2024
+  title: "A Survival Prediction Model of Self-Immolation Based on Machine Learning Techniques"
+  venue: "Advanced Biomedical Research"
+  themes: [clinical-ml]
+- year: 2024
+  title: "A systematic review of machine learning-based tumor-infiltrating lymphocytes analysis in colorectal cancer"
+  venue: "Computers in Biology and Medicine"
+  themes: [computational-pathology, digital-pathology]
+- year: 2023
+  title: "Medication Non-adherence Among Pediatric Liver Transplant Recipients"
+  venue: "Iranian Journal of Pediatrics"
+  themes: [digital-health]
+- year: 2023
+  title: "Assessment of the Tumor-Stroma Ratio and Tumor-Infiltrating Lymphocytes in Colorectal Cancer: Inter-Observer Agreement Evaluation"
+  venue: "Diagnostics"
+  themes: [digital-pathology]
+- year: 2023
+  title: "Investigating Emergency Department Nurses' Educational Needs and Exploring Strategies to Meet Challenges Against Management of These Needs"
+  venue: "Shiraz E-Medical Journal"
+  themes: [digital-health]
+- year: 2022
+  title: "Prediction of Patients with COVID-19 Requiring Intensive Care: A Cross-sectional Study Based on Machine-learning Approach from Iran"
+  venue: "Indian Journal of Critical Care Medicine"
+  themes: [clinical-ml]
+- year: 2021
+  title: "Medication Non-adherence Prevalence and Determinants in Children and Adolescents with Chronic Liver Diseases"
+  venue: "Iranian Journal of Pediatrics"
+  themes: [digital-health]
+- year: 2021
+  title: "Hematological and Biochemical Parameters Associated with Mortality in COVID-19 Infection and Their Correlation with Smoking"
+  venue: "Journal of Patient Safety and Quality Improvement"
+  themes: [clinical-ml]
+- year: 2020
+  title: "What is Digital Health? Review of Definitions"
+  venue: "Studies in Health Technology and Informatics"
+  themes: [digital-health]
+- year: 2019
+  title: "New and Emerging Mobile Technologies for Healthcare (mHealth): A Horizon Scanning Study"
+  venue: "Frontiers in Health Informatics"
+  themes: [digital-health]
+- year: 2019
+  title: "Association between rs2303861 polymorphism in CD82 gene and non-alcoholic fatty liver disease: a preliminary case-control study"
+  venue: "Croatian Medical Journal"
+  themes: [digital-health]
+- year: 2019
+  title: "Identifying Factors That Affect Patient Survival After Orthotopic Liver Transplant Using Machine-Learning Techniques"
+  venue: "Experimental and Clinical Transplantation"
+  themes: [clinical-ml]
+- year: 2018
+  title: "Comparison of artificial neural network and decision tree models for identifying and predicting factors associated with type 2 diabetes"
+  venue: "Journal of Paramedical Sciences and Rehabilitation"
+  themes: [clinical-ml]
+- year: 2017
+  title: "New and Emerging Mobile Technologies for Health Care (mHealth): A Horizon Scanning Review"
+  venue: "Shiraz E-Medical Journal"
+  themes: [digital-health]
+- year: 2017
+  title: "Survival prediction of patients after liver transplantation in Shiraz Organ Transplantation Center using machine learning"
+  venue: "Transplant International"
+  themes: [clinical-ml]
+- year: 2017
+  title: "Predicting patient survival after liver transplantation using decision tree technique"
+  venue: "Transplant International"
+  themes: [clinical-ml]
+- year: 2014
+  title: "A Proposed Model for Sustainable Education in E-learning: the Effective Factors"
+  venue: "Magazine of E-learning Distribution In Academy (MEDIA)"
+  themes: [digital-health]

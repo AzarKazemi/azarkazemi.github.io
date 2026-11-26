@@ -15,7 +15,8 @@
     </div>
 
     <dl class="home-hero__stats">
-      <div><dt>Publications</dt><dd>{{ site.publications.size }}</dd></div>
+      {% assign pub_count = site.data.all_publications | size %}
+      <div><dt>Publications</dt><dd>{{ pub_count }}</dd></div>
       {% if stats.citations %}<div><dt>Citations</dt><dd>{{ stats.citations }}</dd></div>{% endif %}
       {% if stats.h_index %}<div><dt>h-index</dt><dd>{{ stats.h_index }}</dd></div>{% endif %}
       <div><dt>Talks</dt><dd>{{ site.talks.size }}</dd></div>

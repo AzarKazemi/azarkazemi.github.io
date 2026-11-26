@@ -1,0 +1,78 @@
+{% comment %}
+  Publication shown as a card: date + venue tags, title, short excerpt,
+  "More" toggle with the full abstract, DOI, links and citation, and a
+  figure thumbnail on the right.
+  Front matter used: title, date, venue, paperurl, doi, citation,
+  slidesurl, bibtexurl, image, image_alt. The abstract is the page body.
+{% endcomment %}
+{% assign abstract_text = post.content | strip_html | strip %}
+{% if post.doi %}
+  {% assign doi_url = post.doi | prepend: "https://doi.org/" %}
+{% endif %}
+{% assign main_url = post.paperurl | default: doi_url %}
+
+<article class="pub-card" itemscope itemtype="http://schema.org/ScholarlyArticle">
+  <div class="pub-card__body">
+    <p class="pub-card__tag">
+      <span class="pub-card__tag-label">Published</span>
+      <time datetime="{{ post.date | date: '%Y-%m-%d' }}" itemprop="datePublished">{{ post.date | date: "%d %b %Y" }}</time>
+    </p>
+
+    <h3 class="pub-card__title" itemprop="headline">
+      {% if main_url %}<a href="{{ main_url }}" target="_blank" rel="noopener">{{ post.title }}</a>{% else %}{{ post.title }}{% endif %}
+    </h3>
+
+    {% if abstract_text != "" %}
+      <p class="pub-card__excerpt">{{ abstract_text | truncatewords: 45 }}</p>
+
+      <details class="pub-card__more">
+        <summary>
+          <span class="pub-card__more-open">More</span><span class="pub-card__more-close">Less</span>
+          <span aria-hidden="true">&rarr;</span>
+        </summary>
+
+        <div class="pub-card__abstract" itemprop="abstract">
+          <h4>Abstract</h4>
+          {{ post.content }}
+        </div>
+
+        <dl class="pub-card__details">
+          {% if post.doi %}
+            <dt>DOI</dt>
+            <dd><a href="{{ doi_url }}" target="_blank" rel="noopener">{{ post.doi }}</a></dd>
+          {% endif %}
+          {% if post.paperurl or post.slidesurl or post.bibtexurl %}
+            <dt>Links</dt>
+            <dd>
+              {% if post.paperurl %}<a href="{{ post.paperurl }}" target="_blank" rel="noopener">Paper</a>{% endif %}
+              {% if post.slidesurl %} &middot; <a href="{{ post.slidesurl }}" target="_blank" rel="noopener">Slides</a>{% endif %}
+              {% if post.bibtexurl %} &middot; <a href="{{ post.bibtexurl }}" target="_blank" rel="noopener">BibTeX</a>{% endif %}
+            </dd>
+          {% endif %}
+          {% if post.citation %}
+            <dt>Citation</dt>
+            <dd>{{ post.citation }}</dd>
+          {% endif %}
+        </dl>
+
+        {% if post.image %}
+          <p class="pub-card__credit">Image: {{ post.image_alt | default: "figure" }}, from the paper (CC BY 4.0).</p>
+        {% endif %}
+      </details>
+    {% endif %}
+  </div>
+
+  <div class="pub-card__aside">
+    {% if post.venue %}
+      <p class="pub-card__tag">
+        <span class="pub-card__tag-label">Venue</span>
+        <span itemprop="isPartOf">{{ post.venue }}</span>
+      </p>
+    {% endif %}
+    {% if post.image %}
+      <a class="pub-card__figure" href="{{ main_url | default: post.image | relative_url }}" target="_blank" rel="noopener" tabindex="-1">
+        <img src="{{ post.image | relative_url }}" alt="{{ post.image_alt | default: '' }}" loading="lazy">
+      </a>
+    {% endif %}
+  </div>
+</article>

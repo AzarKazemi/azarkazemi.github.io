@@ -157,6 +157,183 @@ $column-gap:         56px;    // space between profile column and text
   }
 }
 
+/* ==========================================================================
+   PUBLICATION CARDS (_includes/publication-card.html)
+   ========================================================================== */
+
+:root {
+  --pub-card-bg: #f1f2f4;
+  --pub-tag-bg: #e2e4e8;
+  --pub-accent: #4b3fb5;          // matches the purple in the banner
+}
+
+html[data-theme="dark"] {
+  --pub-card-bg: rgba(255, 255, 255, 0.05);
+  --pub-tag-bg: rgba(255, 255, 255, 0.10);
+  --pub-accent: #a99ef5;
+}
+
+.pub-section-title {
+  margin: 1.5em 0 0.75em;
+  padding-bottom: 0.4em;
+  border-bottom: 1px solid var(--global-border-color);
+}
+
+.pub-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.25em;
+  margin: 0 0 1.75em;
+  padding: 1.5em;
+  background: var(--pub-card-bg);
+  border-radius: 14px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06), 0 4px 14px rgba(0, 0, 0, 0.06);
+
+  @include breakpoint($medium) {
+    grid-template-columns: minmax(0, 1fr) 240px;
+    gap: 2em;
+    padding: 1.75em 2em;
+  }
+
+  p { margin: 0; }
+}
+
+/* Small label + value chip, e.g. "PUBLISHED 11 Nov 2025" */
+.pub-card__tag {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.5em;
+  max-width: 100%;
+  padding: 0.25em 0.65em;
+  background: var(--pub-tag-bg);
+  border-radius: 6px;
+  font-size: $type-size-6;
+  line-height: 1.4;
+}
+
+.pub-card__tag-label {
+  flex: none;
+  color: var(--pub-accent);
+  font-size: 0.8em;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.pub-card__title {
+  margin: 0.6em 0 0.5em;
+  font-size: $type-size-4;
+  line-height: 1.3;
+
+  a {
+    color: var(--global-text-color);
+    text-decoration: none;
+
+    &:hover { color: var(--pub-accent); text-decoration: underline; }
+  }
+}
+
+.pub-card__excerpt {
+  font-size: $type-size-5;
+  line-height: 1.6;
+}
+
+/* "More" button; the excerpt is hidden while the full abstract is open */
+.pub-card__more {
+  margin-top: 1em;
+
+  summary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4em;
+    padding: 0.4em 1em;
+    background: var(--global-bg-color);
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+    color: var(--pub-accent);
+    font-weight: 600;
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+
+    &::-webkit-details-marker { display: none; }
+    &:hover { box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); }
+    &:focus-visible { outline: 2px solid var(--pub-accent); outline-offset: 2px; }
+  }
+
+  .pub-card__more-close { display: none; }
+
+  &[open] {
+    summary [aria-hidden] { transform: rotate(-90deg); }
+    .pub-card__more-open { display: none; }
+    .pub-card__more-close { display: inline; }
+  }
+}
+
+.pub-card:has(.pub-card__more[open]) .pub-card__excerpt { display: none; }
+
+.pub-card__abstract {
+  margin-top: 1em;
+
+  h4 { margin: 0 0 0.4em; }
+  p { font-size: $type-size-5; line-height: 1.6; }
+}
+
+.pub-card__details {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr);
+  gap: 0.35em 1em;
+  margin: 1em 0 0;
+  font-size: $type-size-6;
+
+  dt {
+    color: var(--pub-accent);
+    font-weight: 600;
+  }
+
+  dd {
+    margin: 0;
+    overflow-wrap: anywhere;
+  }
+}
+
+.pub-card__credit {
+  margin-top: 0.75em !important;
+  color: var(--global-text-color-light);
+  font-size: $type-size-7;
+}
+
+.pub-card__aside {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75em;
+}
+
+.pub-card__figure {
+  display: block;
+  width: 100%;
+  max-width: 420px;
+  overflow: hidden;
+  background: #fff;
+  border: 3px solid #fff;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 220px;
+    object-fit: contain;
+    margin: 0;
+    border-radius: 7px;
+    transition: transform 0.25s ease;
+  }
+
+  &:hover img { transform: scale(1.03); }
+}
+
 /* Footer: full width, normal flow (it was fixed to the bottom of the window
    and covered content on short screens); text lines up with the column */
 .page__footer {

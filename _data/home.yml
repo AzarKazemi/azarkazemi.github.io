@@ -61,18 +61,3 @@ news:
     title: "Key speaker: Beyond Accuracy: From Foundation Models to Clinically Trustworthy Computational Pathology"
     url: "/talks/2026-10-28-talk-1"
     image: "/images/banner.jpg"
-  - date: 2026-10-21
-    place: "npj Digital Medicine"
-    title: "Published: ensembling foundation models for Barrett's esophagus subtyping and cancer detection"
-    url: "https://doi.org/10.1038/s41746-026-03329-3"
-    image: "/images/publications/clinical-benchmark-barrett.jpg"
-  - date: 2026-07-04
-    place: "arXiv"
-    title: "New dataset: TUM-Uteria, paired uterine whole-slide images and pathology reports"
-    url: "https://arxiv.org/abs/2607.04020"
-    image: "/images/publications/uterine-wsi-reports.jpg"
-  - date: 2025-11-01
-    place: "Computers in Biology and Medicine"
-    title: "Published: restoration diffusion for diagnostic-consistent virtual IHC"
-    url: "https://doi.org/10.1016/j.compbiomed.2025.111264"
-    image: "/images/publications/virtual-ihc-diffusion.jpg"

@@ -57,7 +57,7 @@ themes:
 # News & talks cards (newest first). image: path under /images, or leave empty.
 news:
   - date: 2026-10-28
-    place: "MedAI Summit 2026 · Key speaker"
+    place: "2nd MedAI Summit · Key speaker"
     title: "Key speaker: Beyond Accuracy: From Foundation Models to Clinically Trustworthy Computational Pathology"
     url: "/talks/2026-10-28-talk-1"
     image: "/images/banner.jpg"

@@ -44,6 +44,16 @@ $site-gutter-mobile: 16px;    // side margin on phones
 $sidebar-col:        230px;   // width of the profile column on wide screens
 $column-gap:         56px;    // space between profile column and text
 
+/* Base text size: every heading and text size on the site scales from this
+   (the theme default was 16px on phones / 18px on larger screens) */
+html {
+  font-size: 15px;
+
+  @include breakpoint($medium) {
+    font-size: 16px;
+  }
+}
+
 /* Header bar: spans the full window; its contents line up with the column */
 .masthead__inner-wrap {
   max-width: $site-max-width;
@@ -226,8 +236,8 @@ html[data-theme="dark"] {
 
 .pub-card__title {
   margin: 0.6em 0 0.5em;
-  font-size: $type-size-4;
-  line-height: 1.3;
+  font-size: 1.1em;
+  line-height: 1.35;
 
   a {
     color: var(--global-text-color);
@@ -238,7 +248,7 @@ html[data-theme="dark"] {
 }
 
 .pub-card__excerpt {
-  font-size: $type-size-5;
+  font-size: 0.95em;
   line-height: 1.6;
 }
 
@@ -280,7 +290,7 @@ html[data-theme="dark"] {
   margin-top: 1em;
 
   h4 { margin: 0 0 0.4em; }
-  p { font-size: $type-size-5; line-height: 1.6; }
+  p { font-size: 0.95em; line-height: 1.6; }
 }
 
 .pub-card__details {

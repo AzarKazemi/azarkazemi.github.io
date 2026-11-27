@@ -54,12 +54,37 @@ themes:
       Defining digital health, horizon scanning of mHealth technologies, e-learning
       and clinical studies on medication adherence and patient care.
 
+# Professional activities (committees, organizing, reviewing), newest first.
+# Shown on the home page and the CV page. url is optional.
+activities:
+  - year: "2027"
+    role: "Scientific Committee member"
+    event: "ECDP 2027, 23rd European Congress on Digital Pathology (ESDIP), Rotterdam, The Netherlands"
+    url: "https://www.ecdp2027.org/organization/"
+  - year: "2026"
+    role: "Co-organizer"
+    event: "REG² 2026, Pathologist REasoning-Guided REport Generation Challenge, MICCAI 2026 Grand Challenge, Strasbourg, France"
+    url: "/news/reg2026-miccai/"
+  - year: "2026"
+    role: "Reviewer"
+    event: "Papers submitted by participating teams, REG² 2026 (MICCAI 2026)"
+
 # News items (newest first). The home page shows the first 3; /news/ shows all.
 #   kind:    short label on the card (Talk, Challenge, Paper, Award, ...)
 #   summary: one or two sentences, shown on the /news/ page
 #   url:     a page on this site ("/news/...") or a full link ("https://...")
 #   image:   path under /images, or leave empty
 news:
+  - date: 2026-11-27
+    kind: "Committee"
+    place: "ECDP 2027 · Rotterdam"
+    title: "Scientific Committee member, ECDP 2027 (Rotterdam)"
+    summary: >-
+      I joined the Scientific Committee of the 23rd European Congress on Digital
+      Pathology (ECDP 2027), organized by the European Society of Digital and
+      Integrative Pathology (ESDIP), 14–18 June 2027 in Rotterdam.
+    url: "https://www.ecdp2027.org/organization/"
+    image: "/images/news/ecdp2027.png"
   - date: 2026-10-28
     kind: "Keynote"
     place: "2nd MedAI Summit · Key speaker"

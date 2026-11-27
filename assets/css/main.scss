@@ -628,6 +628,34 @@ html[data-theme="dark"] {
   line-height: 1.4;
 }
 
+/* Professional activities: year + role, one line each */
+.activity-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    display: flex;
+    gap: 1em;
+    padding: 0.7em 0.9em;
+    margin: 0 0 0.5em;
+    background: var(--pub-card-bg);
+    border: 1px solid var(--pub-card-border);
+    border-left: 4px solid var(--pub-accent);
+    border-radius: 8px;
+    font-size: $type-size-6;
+    line-height: 1.5;
+  }
+
+  a { color: var(--pub-accent); }
+}
+
+.activity-list__year {
+  flex: 0 0 3.2em;
+  color: var(--pub-accent);
+  font-weight: 700;
+}
+
 /* Footer: full width, normal flow (it was fixed to the bottom of the window
    and covered content on short screens); text lines up with the column */
 .page__footer {

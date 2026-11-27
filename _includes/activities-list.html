@@ -1,0 +1,13 @@
+{% comment %} Professional activities list. Content: _data/home.yml (activities). {% endcomment %}
+<ul class="activity-list">
+  {% for a in site.data.home.activities %}
+    {% if a.url contains '://' %}{% assign href = a.url %}{% else %}{% assign href = a.url | relative_url %}{% endif %}
+    <li>
+      <span class="activity-list__year">{{ a.year }}</span>
+      <span class="activity-list__text">
+        <strong>{{ a.role }}</strong>,
+        {% if a.url %}<a href="{{ href }}"{% if a.url contains '://' %} target="_blank" rel="noopener"{% endif %}>{{ a.event }}</a>{% else %}{{ a.event }}{% endif %}
+      </span>
+    </li>
+  {% endfor %}
+</ul>

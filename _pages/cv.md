@@ -1,6 +1,7 @@
 ---
 layout: archive
 title: "CV"
+banner_subtitle: "Education, experience and professional activities"
 permalink: /cv/
 author_profile: true
 redirect_from:

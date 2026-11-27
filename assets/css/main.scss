@@ -122,7 +122,9 @@ html {
   inset: 0;
   z-index: 1;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
   max-width: $site-max-width;
   margin: 0 auto;
   padding: 0 1.5em;
@@ -137,6 +139,16 @@ html {
   line-height: 1.1;
   letter-spacing: 0.01em;
   text-shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
+}
+
+.site-banner__subtitle {
+  max-width: 34em;
+  margin: 0.45em 0 0;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: clamp(0.8rem, 1.5vw, 1.05rem);
+  font-weight: 500;
+  line-height: 1.35;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
 }
 
 /* Centred content column */

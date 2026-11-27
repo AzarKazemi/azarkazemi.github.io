@@ -36,7 +36,10 @@ layout: compress
       <div class="site-banner">
         <img src="{{ '/images/banner.jpg' | relative_url }}" alt="" width="2172" height="724" fetchpriority="high">
         {% if banner_title %}
-          <div class="site-banner__inner"><p class="site-banner__title">{{ banner_title }}</p></div>
+          <div class="site-banner__inner">
+            <p class="site-banner__title">{{ banner_title }}</p>
+            {% if page.banner_subtitle %}<p class="site-banner__subtitle">{{ page.banner_subtitle }}</p>{% endif %}
+          </div>
         {% endif %}
       </div>
     {% endif %}

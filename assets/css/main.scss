@@ -90,6 +90,42 @@ html {
   }
 }
 
+/* Page name written on the banner (yellow, like the home headline) */
+.site-banner {
+  position: relative;
+
+  // darken the left side so the title reads over the bright tissue
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(14, 18, 60, 0.82) 0%, rgba(14, 18, 60, 0.55) 40%, rgba(14, 18, 60, 0) 75%);
+    pointer-events: none;
+  }
+}
+
+.site-banner__inner {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  max-width: $site-max-width;
+  margin: 0 auto;
+  padding: 0 1.5em;
+  box-sizing: border-box;
+}
+
+.site-banner__title {
+  margin: 0;
+  color: #ffc94d;
+  font-size: clamp(1.5rem, 4vw, 2.8rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: 0.01em;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
+}
+
 /* Centred content column */
 #main {
   width: 100%;

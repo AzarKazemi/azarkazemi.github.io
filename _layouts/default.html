@@ -19,8 +19,25 @@ layout: compress
       {% include home/hero.html %}
     {% else %}
       <!-- Full-width banner strip; the image is cropped to fit by CSS (object-fit: cover) -->
+      {% comment %} Banner title: front matter banner_title, else the section name, else the page title {% endcomment %}
+      {% assign banner_title = page.banner_title %}
+      {% unless banner_title %}
+        {% case page.collection %}
+          {% when 'publications' %}{% assign banner_title = 'Publications' %}
+          {% when 'talks' %}{% assign banner_title = 'Talks' %}
+          {% when 'teaching' %}{% assign banner_title = 'Teaching' %}
+          {% when 'portfolio' %}{% assign banner_title = 'Portfolio' %}
+          {% when 'posts' %}{% assign banner_title = 'Blog' %}
+          {% else %}
+            {% assign url_start = page.url | slice: 0, 6 %}
+            {% if url_start == '/news/' %}{% assign banner_title = 'News' %}{% else %}{% assign banner_title = page.title %}{% endif %}
+        {% endcase %}
+      {% endunless %}
       <div class="site-banner">
         <img src="{{ '/images/banner.jpg' | relative_url }}" alt="" width="2172" height="724" fetchpriority="high">
+        {% if banner_title %}
+          <div class="site-banner__inner"><p class="site-banner__title">{{ banner_title }}</p></div>
+        {% endif %}
       </div>
     {% endif %}
 

@@ -80,3 +80,13 @@ news:
       reasoning-based evaluation and reviewing participant papers.
     url: "/news/reg2026-miccai/"
     image: "/images/talks/reg2026-miccai.jpg"
+  - date: 2026-09-16
+    kind: "MCML"
+    place: "Munich Center for Machine Learning"
+    title: "MCML members co-organize REG 2026, a MICCAI Grand Challenge advancing AI for computational pathology"
+    summary: >-
+      MCML features REG 2026, co-organized by MCML members Zhengyang Xu, Fabian Gülhan
+      and Azar Kazemi: a MICCAI 2026 Grand Challenge in Strasbourg, sponsored by MCML,
+      that offers a common benchmark for AI in pathology.
+    url: "https://mcml.ai/events/2026-09-27-miccai-challenge-reg/"
+    image: "/images/news/mcml-reg2026.webp"

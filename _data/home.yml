@@ -103,16 +103,6 @@ news:
       our Barrett's esophagus study.
     url: "/talks/2026-10-28-talk-1"
     image: "/images/talks/medai-summit-2026.png"
-  - date: 2026-09-27
-    kind: "Challenge"
-    place: "MICCAI 2026 · Strasbourg"
-    title: "Contributing to the REG² 2026 challenge on reasoning-guided pathology report generation"
-    summary: >-
-      With the Schüffler Lab (TUM), I contribute to REG² 2026 at MICCAI: data
-      curation and quality control, prompt engineering for LLM report generation,
-      reasoning-based evaluation and reviewing participant papers.
-    url: "/news/reg2026-miccai/"
-    image: "/images/talks/reg2026-miccai.jpg"
   - date: 2026-09-16
     kind: "MCML"
     place: "Munich Center for Machine Learning"

@@ -380,10 +380,10 @@ html[data-theme="dark"] {
   inset: 0;
   background-size: cover;
   background-position: center 55%;
-  opacity: 0.28;
-  mix-blend-mode: screen;
-  -webkit-mask-image: linear-gradient(90deg, transparent 15%, #000 75%);
-          mask-image: linear-gradient(90deg, transparent 15%, #000 75%);
+  opacity: 0.9;
+  // keep the left side (headline and stats) dark enough to read
+  -webkit-mask-image: linear-gradient(90deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.45) 35%, #000 70%);
+          mask-image: linear-gradient(90deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.45) 35%, #000 70%);
 }
 
 .home-hero__inner {

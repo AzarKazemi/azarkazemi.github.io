@@ -3,7 +3,7 @@
 hero:
   eyebrow: "Azar Kazemi, PhD · Medical Informatics"
   headline: "AI for Medicine"
-  headline_accent: "from clinical data to computational pathology"
+  headline_accent: "From Clinical Data to Computational Pathology"
   intro: >-
     I build and evaluate machine-learning methods that turn whole-slide images and
     biomedical data into reliable clinical evidence, from pathology foundation

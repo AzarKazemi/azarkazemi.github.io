@@ -55,19 +55,27 @@ themes:
       and clinical studies on medication adherence and patient care.
 
 # Professional activities (committees, organizing, reviewing), newest first.
-# Shown on the home page and the CV page. url is optional.
+# Home page shows them as cards (title + image); the CV page shows role + event as a list.
+# url and image are optional.
 activities:
   - year: "2027"
     role: "Scientific Committee member"
+    title: "ECDP 2027, 23rd European Congress on Digital Pathology · Rotterdam"
     event: "ECDP 2027, 23rd European Congress on Digital Pathology (ESDIP), Rotterdam, The Netherlands"
     url: "https://www.ecdp2027.org/organization/"
+    image: "/images/news/ecdp2027.png"
   - year: "2026"
     role: "Co-organizer"
+    title: "REG² 2026, MICCAI Grand Challenge on reasoning-guided pathology report generation · Strasbourg"
     event: "REG² 2026, Pathologist REasoning-Guided REport Generation Challenge, MICCAI 2026 Grand Challenge, Strasbourg, France"
     url: "/news/reg2026-miccai/"
+    image: "/images/talks/reg2026-miccai.jpg"
   - year: "2026"
     role: "Reviewer"
+    title: "Reviewing papers submitted by participating teams, REG² 2026 (MICCAI)"
     event: "Papers submitted by participating teams, REG² 2026 (MICCAI 2026)"
+    url: "/news/reg2026-miccai/"
+    image: "/images/news/mcml-reg2026.webp"
 
 # News items (newest first). The home page shows the first 3; /news/ shows all.
 #   kind:    short label on the card (Talk, Challenge, Paper, Award, ...)

@@ -17,7 +17,8 @@ layout: default
 
   <div class="archive">
     {% unless page.header.overlay_color or page.header.overlay_image %}
-      <h1 class="page__title">{{ page.title }}</h1>
+      {% comment %} The page name is already shown on the banner; keep the heading for screen readers only {% endcomment %}
+      <h1 class="page__title visually-hidden">{{ page.title }}</h1>
     {% endunless %}
     {{ content }}
   </div>

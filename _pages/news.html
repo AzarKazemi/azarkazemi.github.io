@@ -1,0 +1,39 @@
+---
+layout: archive
+title: "News"
+permalink: /news/
+author_profile: true
+---
+
+{% comment %} All news items as cards, newest first. Content: _data/home.yml (news). {% endcomment %}
+{% for item in site.data.home.news %}
+  {% if item.url contains '://' %}{% assign href = item.url %}{% assign external = true %}{% else %}{% assign href = item.url | relative_url %}{% assign external = false %}{% endif %}
+  <article class="pub-card">
+    <div class="pub-card__body">
+      <p class="pub-card__tag">
+        <span class="pub-card__tag-label">{{ item.kind | default: "News" }}</span>
+        <time datetime="{{ item.date | date: '%Y-%m-%d' }}">{{ item.date | date: "%d %b %Y" }}</time>
+      </p>
+
+      <h3 class="pub-card__title"><a href="{{ href }}"{% if external %} target="_blank" rel="noopener"{% endif %}>{{ item.title }}</a></h3>
+
+      {% if item.summary %}<p class="pub-card__excerpt">{{ item.summary }}</p>{% endif %}
+
+      <p><a href="{{ href }}"{% if external %} target="_blank" rel="noopener"{% endif %}>Read more <span aria-hidden="true">&rarr;</span></a></p>
+    </div>
+
+    <div class="pub-card__aside">
+      {% if item.place %}
+        <p class="pub-card__tag">
+          <span class="pub-card__tag-label">Where</span>
+          <span>{{ item.place }}</span>
+        </p>
+      {% endif %}
+      {% if item.image %}
+        <a class="pub-card__figure" href="{{ href }}" tabindex="-1"{% if external %} target="_blank" rel="noopener"{% endif %}>
+          <img src="{{ item.image | relative_url }}" alt="" loading="lazy">
+        </a>
+      {% endif %}
+    </div>
+  </article>
+{% endfor %}

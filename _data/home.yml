@@ -54,15 +54,29 @@ themes:
       Defining digital health, horizon scanning of mHealth technologies, e-learning
       and clinical studies on medication adherence and patient care.
 
-# News & talks cards (newest first). image: path under /images, or leave empty.
+# News items (newest first). The home page shows the first 3; /news/ shows all.
+#   kind:    short label on the card (Talk, Challenge, Paper, Award, ...)
+#   summary: one or two sentences, shown on the /news/ page
+#   url:     a page on this site ("/news/...") or a full link ("https://...")
+#   image:   path under /images, or leave empty
 news:
   - date: 2026-10-28
+    kind: "Keynote"
     place: "2nd MedAI Summit · Key speaker"
     title: "Beyond Accuracy: From Foundation Models to Clinically Trustworthy Computational Pathology"
+    summary: >-
+      Keynote at the 2nd MedAI Summit on what it takes to move pathology foundation
+      models from benchmark accuracy to clinically trustworthy use, with lessons from
+      our Barrett's esophagus study.
     url: "/talks/2026-10-28-talk-1"
     image: "/images/talks/medai-summit-2026.png"
   - date: 2026-09-27
+    kind: "Challenge"
     place: "MICCAI 2026 · Strasbourg"
     title: "Contributing to the REG² 2026 challenge on reasoning-guided pathology report generation"
+    summary: >-
+      With the Schüffler Lab (TUM), I contribute to REG² 2026 at MICCAI: data
+      curation and quality control, prompt engineering for LLM report generation,
+      reasoning-based evaluation and reviewing participant papers.
     url: "/news/reg2026-miccai/"
     image: "/images/talks/reg2026-miccai.jpg"

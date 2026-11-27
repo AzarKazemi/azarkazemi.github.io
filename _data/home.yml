@@ -87,6 +87,16 @@ activities:
 #   url:     a page on this site ("/news/...") or a full link ("https://...")
 #   image:   path under /images, or leave empty
 news:
+  - date: 2026-12-03
+    kind: "Talk"
+    place: "MISTAI Workshop · Bonn"
+    title: "From Foundation Models to Ensembles: AI for Barrett's Esophagus"
+    summary: >-
+      Spotlight talk at the MISTAI Computational Pathology Workshop "AI for
+      Muscle-Invasive Bladder Cancer", 3 December 2026 in Bonn, organized by the
+      University Hospital Bonn and Dnipro State Medical University.
+    url: "https://albarqouni.github.io/community/mistai-workshop2026/"
+    image: "/images/news/mistai2026.webp"
   - date: 2026-11-27
     kind: "Committee"
     place: "ECDP 2027 · Rotterdam"

@@ -1,7 +1,7 @@
 ---
 title: "Introduction to Computer"
 collection: teaching
-type: "Lecturer"
+type: "Adjunct Lecturer"
 semester: "1st semester 2017–2018"
 date: 2017-09-23
 venue: "Shiraz University of Medical Sciences"

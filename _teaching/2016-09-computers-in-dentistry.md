@@ -1,7 +1,7 @@
 ---
 title: "Application of Computer in Dentistry"
 collection: teaching
-type: "Lecturer"
+type: "Adjunct Lecturer"
 semester: "1st semester 2016–2017"
 date: 2016-09-23
 venue: "Shiraz University of Medical Sciences"

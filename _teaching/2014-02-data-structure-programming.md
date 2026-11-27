@@ -1,7 +1,7 @@
 ---
 title: "Data Structure and Computer Programming"
 collection: teaching
-type: "Lecturer"
+type: "Adjunct Lecturer"
 semester: "2nd semester 2013–2014"
 date: 2014-02-01
 venue: "Shiraz University of Medical Sciences"

@@ -1,7 +1,7 @@
 ---
 title: "Information Technology in Operating Room"
 collection: teaching
-type: "Lecturer"
+type: "Adjunct Lecturer"
 semester: "2nd semester 2016–2017"
 date: 2017-02-04
 venue: "Shiraz University of Medical Sciences"

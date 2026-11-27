@@ -668,6 +668,17 @@ html[data-theme="dark"] {
   }
 }
 
+/* Cards without an image: a large icon on the purple gradient */
+.news-card__img:has(.news-card__icon) {
+  display: grid;
+  place-items: center;
+}
+
+.news-card__icon {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 2.6em;
+}
+
 .news-card--pub .news-card__img {
   background: #fff;
 
@@ -687,6 +698,35 @@ html[data-theme="dark"] {
   font-size: $type-size-6;
   font-weight: 600;
   line-height: 1.4;
+}
+
+/* CV page (_pages/cv.md) */
+.cv {
+  h2 {
+    margin: 2em 0 0.8em;
+    padding-bottom: 0.35em;
+    border-bottom: 2px solid var(--pub-accent);
+    color: var(--pub-accent);
+    font-size: 1.15em;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  > h2:first-child { margin-top: 0.5em; }
+
+  h3 {
+    margin: 1.4em 0 0.15em;
+    font-size: 1em;
+  }
+
+  .cv-meta {
+    margin: 0 0 0.5em;
+    color: var(--global-text-color-light, #6b7280);
+    font-size: $type-size-6;
+  }
+
+  ul { margin-top: 0.4em; }
+  li { margin-bottom: 0.35em; font-size: 0.95em; line-height: 1.55; }
 }
 
 /* Professional activities: year + role, one line each */

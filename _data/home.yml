@@ -70,6 +70,16 @@ activities:
     event: "REG² 2026, Pathologist REasoning-Guided REport Generation Challenge, MICCAI 2026 Grand Challenge, Strasbourg, France (including reviewing papers submitted by participating teams)"
     url: "/news/reg2026-miccai/"
     image: "/images/talks/reg2026-miccai.jpg"
+  - year: "2026"
+    role: "Reviewer"
+    title: "MICCAI 2026, International Conference on Medical Image Computing and Computer Assisted Intervention"
+    event: "MICCAI 2026, International Conference on Medical Image Computing and Computer Assisted Intervention"
+    icon: "fas fa-pen-nib"
+  - year: ""
+    role: "Ad hoc Reviewer"
+    title: "Computers in Biology and Medicine (Elsevier journal)"
+    event: "Computers in Biology and Medicine (Elsevier)"
+    icon: "fas fa-book-open"
 
 # News items (newest first). The home page shows the first 3; /news/ shows all.
 #   kind:    short label on the card (Talk, Challenge, Paper, Award, ...)

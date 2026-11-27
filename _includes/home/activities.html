@@ -9,9 +9,9 @@
       {% if a.url contains '://' %}{% assign href = a.url %}{% else %}{% assign href = a.url | relative_url %}{% endif %}
       {% if a.url %}<a class="news-card" href="{{ href }}"{% if a.url contains '://' %} target="_blank" rel="noopener"{% endif %}>{% else %}<div class="news-card">{% endif %}
         <span class="news-card__img">
-          {% if a.image %}<img src="{{ a.image | relative_url }}" alt="" loading="lazy">{% endif %}
+          {% if a.image %}<img src="{{ a.image | relative_url }}" alt="" loading="lazy">{% elsif a.icon %}<i class="{{ a.icon }} news-card__icon" aria-hidden="true"></i>{% endif %}
         </span>
-        <span class="news-card__meta">{{ a.year }} &middot; {{ a.role | upcase }}</span>
+        <span class="news-card__meta">{% if a.year != "" and a.year %}{{ a.year }} &middot; {% endif %}{{ a.role | upcase }}</span>
         <span class="news-card__title">{{ a.title | default: a.event }}</span>
       {% if a.url %}</a>{% else %}</div>{% endif %}
     {% endfor %}
